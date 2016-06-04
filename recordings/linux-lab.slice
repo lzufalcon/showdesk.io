@@ -1,0 +1,11 @@
+var VNC_frame_slice_str = '=-+-+=';
+var VNC_frame_encoding = 'binary';
+var VNC_frame_tags = 'Linux, Linux Lab';
+var VNC_frame_size = '937.2K';
+var VNC_frame_title = 'Linux Lab Usage';
+var VNC_frame_create = '1489241775.0445454';
+var VNC_frame_author = 'Wu Zhangjin <wuzhangjin@gmail.com>';
+var VNC_frame_length = 2937;
+var VNC_frame_time = '00:01:02';
+var VNC_frame_desc = 'Linux Lab aims to create a quick Linux learning and development environment, this video demonstrates how to use it!';
+var VNC_frame_slices = 5;

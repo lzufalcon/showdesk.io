@@ -1,0 +1,40 @@
+The usage of iframeResizer:
+
+1. Download https://raw.githubusercontent.com/davidjbradshaw/iframe-resizer/master/js/iframeResizer.min.js
+
+2. Patch local website
+
+diff --git a/_includes/themes/tinylab.org/default.html b/_includes/themes/tinylab.org/default.html
+index 811cced..7486875 100644
+--- a/_includes/themes/tinylab.org/default.html
++++ b/_includes/themes/tinylab.org/default.html
+@@ -58,10 +58,23 @@
+   <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery-1.10.1{{ css_js_compress_tag }}.js"></script>
+   <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery.browser{{ css_js_compress_tag }}.js"></script>
+   <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery-iframe-auto-height{{ css_js_compress_tag }}.js"></script>
++  <script type="text/javascript" src="{{ ASSET_PATH }}/js/iframeResizer.min{{ css_js_compress_tag }}.js"></script>
+   <script type="text/javascript" src="{{ ASSET_PATH }}/qrcode/jquery.qrcode{{ css_js_compress_tag }}.js"></script>
+   <script type="text/javascript" src="{{ ASSET_PATH }}/js/core{{ css_js_compress_tag }}.js"></script>
+   <script>
++    function resize_iframe() {
++       iFrameResize({
++               log: false,
++               autoResize: true,
++               interval: -1,
++               minHeight: 300,
++               heightCalculationMethod: "lowestElement",
++       });
++    }
++
+     $(document).ready(function () {
++      resize_iframe();
++      //setTimeout(resize_iframe, 2000);
+       $('iframe').iframeAutoHeight({debug: false});
+     });
+   </script>
+
+Note: Must call resize_iframe() before "$('iframe').iframeAutoHeight({debug: false});" otherwise, firefox will not work.
+
+3. Embed noVNC session with iframe
+
+<iframe src="http://10.66.33.10:6081/play/?data=linux-lab.slice&f=1" width="100%" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" border="0" allowfullscreen></iframe>
