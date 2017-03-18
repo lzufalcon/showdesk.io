@@ -23,7 +23,7 @@ title : 桌面秀
 tagline: 轻松录制，即时分享！
 start: 2017
 
-production_url : http://showdesk.github.io
+production_url : https://showdesk.github.io
 
 compress_html:
   clippings: all
