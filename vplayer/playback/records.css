@@ -9,4 +9,4 @@
 #VNC_records tr.head { background-color: #ccc; }
 #VNC_records tr.odd { background-color: #eee; }
 #VNC_records tr.even { background-color: #fff; }
-#VNC_records tr:hover { background-color: #aaa; }
+#VNC_records tr:hover { background-color: #666; }
