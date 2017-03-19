@@ -1,6 +1,6 @@
 var VNC_frame_slice_str = '=-+-+=';
 var VNC_frame_encoding = 'binary';
-var VNC_frame_tags = 'CS630, X86, Assembly, Linux';
+var VNC_frame_tags = 'CS630, X86, Assembly';
 var VNC_frame_size = '10.6M';
 var VNC_frame_title = 'CS630 Qemu Lab Usage';
 var VNC_frame_create = '1489850480.335766';

@@ -1,0 +1,11 @@
+var VNC_frame_slice_str = '=-+-+=';
+var VNC_frame_encoding = 'binary';
+var VNC_frame_tags = 'Linux 0.11, OS';
+var VNC_frame_size = '11.1M';
+var VNC_frame_title = 'Linux 0.11 Lab Usage';
+var VNC_frame_create = '1489859663.35469';
+var VNC_frame_author = 'Wu Zhangjin <wuzhangjin@gmail.com';
+var VNC_frame_length = 4136;
+var VNC_frame_time = '00:06:42';
+var VNC_frame_desc = 'Do Linux 0.11 operating system experiments with Linux 0.11 Lab.';
+var VNC_frame_slices = 47;
