@@ -18,7 +18,7 @@ VNC_RECORD_DIR=$3
 ${TOP_DIR}/tools/generate-records.py $VNC_RECORD_DIR $VNC_RECORD_ACTION $VNC_WWW_DIR
 
 # Public sessions
-find $VNC_RECORD_DIR -name "*.session.md" | xargs -i cp {} $VNC_SESSION_DIR
+find $VNC_RECORD_DIR -name "*.session.md" | xargs -i mv {} $VNC_SESSION_DIR
 
 # Public posts
-find $VNC_RECORD_DIR -name "*.post.md" | xargs -i cp {} $VNC_POST_DIR
+find $VNC_RECORD_DIR -name "*.post.md" | xargs -i mv {} $VNC_POST_DIR
