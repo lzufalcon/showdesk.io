@@ -22,15 +22,10 @@ Input the vnc server, port and password, after disconnect, the sessions will be 
 
 ## pyvnc2swf
 
-Download the version with novnc support:
+Start x11vnc server on localhost, press 'Start' to record local window: 
 
-    $ git clone https://github.com/tinyclub/pyvnc2swf.git
-    $ cd pyvnc2swf/pyvnc2swf/
+    $ ./tools/novnc-record.sh
 
-Start x11vnc server on localhost and record it immediately, the session is saved in `tests/` by default:
+'Stop' and close the window, then, replay it with VPlayer:
 
-    $ ./tests/novnc-record.sh
-
-Use the GUI and allow to configure vnc server, port and password:
-
-    $ ./vnc2swf         # Choose outtype: novnc
+    $ ./tools/novnc-play.sh

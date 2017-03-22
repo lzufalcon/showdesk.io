@@ -5,12 +5,8 @@
 
 TOP_DIR=$(cd $(dirname $0) && pwd)/..
 
-DEF_BROWSER=firefox
-which chromium-browser >/dev/null 2>&1 && DEF_BROWSER=chromium-browser
-[ -z "$WEB_BROWSER" ] && WEB_BROWSER=$DEF_BROWSER
-
 NOVNC_RECORD=${TOP_DIR}/tools/novnc-record.sh
-NOVNC_PLAY="$WEB_BROWSER ${TOP_DIR}/play.html"
+NOVNC_PLAY=${TOP_DIR}/tools/novnc-play.sh
 NOVNC_RECORD_ICON=${TOP_DIR}/images/pyvnc2swf/recorder.png
 NOVNC_PLAY_ICON=${TOP_DIR}/images/pyvnc2swf/player.png
 
