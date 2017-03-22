@@ -428,7 +428,7 @@ WebUtil.load_scripts = function (files_by_dir) {
         for (var f = 0; f < files.length; f++) {
             script = document.createElement('script');
             script.type = 'text/javascript';
-	    if (files[f].match(/^(http|https|ftp):\/\//))
+	    if (files[f].match(/^(http|https|ftp|file):\/\//))
                 script.src = files[f];
 	    else
                 script.src = WebUtil.get_include_uri(root_dir) + files[f];
