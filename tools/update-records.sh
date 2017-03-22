@@ -15,7 +15,7 @@ VNC_RECORD_DIR=$3
 [ -z "$VNC_POST_DIR" ] && VNC_POST_DIR=${TOP_DIR}/_posts/
 [ -z "$VNC_SESSION_DIR" ] && VNC_SESSION_DIR=${TOP_DIR}/sessions/
 
-${TOP_DIR}/tools/generate-records.py $VNC_RECORD_DIR $VNC_RECORD_ACTION $VNC_WWW_DIR
+${TOP_DIR}/pyvnc2swf/generate-records.py $VNC_RECORD_DIR $VNC_RECORD_ACTION $VNC_WWW_DIR
 
 # Public sessions
 find $VNC_RECORD_DIR -name "*.session.md" | xargs -i mv {} $VNC_SESSION_DIR

@@ -21,3 +21,4 @@ pdfs/*
 .jekyll-metadata
 .lab*
 *.pyc
+.vnc.pwd.file
