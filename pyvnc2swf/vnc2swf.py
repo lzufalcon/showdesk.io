@@ -392,10 +392,17 @@ class VNC2SWFWithTk:
           return
       self.root.destroy()
     return
-  
+
+  def stop_record(self):
+    if self.recording:
+      self.client.interrupt()
+
   # Do recording.
   def record(self):
     self.client.tk_init(self.root)
+    self.root.iconify()
+    if self.outtype == 'novnc':
+      self.root.bind('<Enter>', lambda e: self.stop_record())
     try:
       self.client.init().auth().start()
     except socket.error, e:
