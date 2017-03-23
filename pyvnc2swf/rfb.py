@@ -30,7 +30,6 @@ import sys, time, socket, re, os
 from struct import pack, unpack
 from d3des import decrypt_passwd, generate_response
 from image import IMG_SOLID, IMG_RAW
-from records import *
 stderr = sys.stderr
 lowerbound = max
 
