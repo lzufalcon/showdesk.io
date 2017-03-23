@@ -593,10 +593,8 @@ class RFBNetworkClientForRecording(RFBNetworkClient):
       self.data = 'vncLog0.1'
       print >>stderr, 'Creating %srec: %r: %s' % (outtype, fp, self.data)
     else:
-      t = time.time()
-      self.start_time = int(t*1000)
-
-      self.data = "var VNC_frame_create = '%r';\n" % t
+      self.start_time = 0
+      self.data = "var VNC_frame_create = '%r';\n" % time.time()
 
       for i in ('author', 'title', 'tags', 'desc'):
         # Prefer info to environment variables
@@ -635,7 +633,12 @@ class RFBNetworkClientForRecording(RFBNetworkClient):
         t = time.time()
         self.data = pack('>LL', int(t), int((t-int(t))*1000000))
       else:
-        delta = int(time.time()*1000) - self.start_time
+        cur_time = int(time.time()*1000)
+        if self.start_time == 0:
+          delta = 0
+          if update: self.start_time = cur_time
+        else:
+          delta = cur_time - self.start_time
         self.data = "{%d{" % delta
       if update:
         RFBNetworkClient.request_update(self, update)
