@@ -631,8 +631,8 @@ class RFBNetworkClientForRecording(RFBNetworkClient):
   def request_update(self, update = 1):
     if self.updated:
       self.updated = False
-      t = time.time()
       if self.outtype == 'vnc':
+        t = time.time()
         self.data = pack('>LL', int(t), int((t-int(t))*1000000))
       else:
         delta = int(time.time()*1000) - self.start_time
