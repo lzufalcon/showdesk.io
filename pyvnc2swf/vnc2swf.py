@@ -423,6 +423,8 @@ class VNC2SWFWithTk:
     self.set_status()
     if self.exit_immediately:
       self.file_exit()
+    if self.outtype == 'novnc':
+      self.file_exit()
     return
 
   # Displays an error message.
