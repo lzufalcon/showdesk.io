@@ -313,9 +313,9 @@ class VNC2SWFWithTk:
       self.root.bind('<space>', lambda e: self.record())
       enable_menus('normal')
     else:
-      s.append('Recording.')
+      s.append('Recording...')
       self.toggle_button.config(text='Stop', underline=0)
-      self.toggle_button.config(background='#ff8080', activebackground='#ff0000')
+      self.toggle_button.config(background='#80ff80', activebackground='#ff0000')
       self.toggle_button.config(command=self.client.interrupt)
       self.root.bind('<s>', lambda e: self.client.interrupt())
       self.root.bind('<space>', lambda e: self.client.interrupt())
@@ -393,16 +393,16 @@ class VNC2SWFWithTk:
       self.root.destroy()
     return
 
-  def stop_record(self):
-    if self.recording:
-      self.client.interrupt()
+  #def stop_record(self):
+  #  if self.recording:
+  #    self.client.interrupt()
 
   # Do recording.
   def record(self):
     self.client.tk_init(self.root)
-    self.root.iconify()
-    if self.outtype == 'novnc':
-      self.root.bind('<Enter>', lambda e: self.stop_record())
+    #self.root.iconify()
+    #if self.outtype == 'novnc':
+    #  self.root.bind('<Enter>', lambda e: self.stop_record())
     try:
       self.client.init().auth().start()
     except socket.error, e:
