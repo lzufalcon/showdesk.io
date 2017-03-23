@@ -68,9 +68,9 @@ JB :
     theme: prettify
 
   comments :
-    provider : duoshuo
-    duoshuo :
-      short_name : linux-talents
+    provider : gentie
+    gentie :
+      keyid: cb0f92d1ca4c46f2b5832f456b12655a
 
   analytics :
     providers :
