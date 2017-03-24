@@ -1,9 +1,10 @@
 <ul class="nav">
-  <li id="home-link" {% if page.url == "/index.html" %} class="active"{% endif %}>
-    <a rel="bookmark" href="{{ HOME_PATH }}" title="发现">发现</a>
-  </li>
   <li>
     <a href="http://tinylab.org" target="_blank" title="泰晓科技 -- 聚焦嵌入式 Linux - 追本溯源，见微知著！">泰晓</a>
+  </li>
+
+  <li id="home-link" {% if page.url == "/index.html" %} class="active"{% endif %}>
+    <a rel="bookmark" href="{{ HOME_PATH }}" title="发现">发现</a>
   </li>
 
    {% assign pages_list = site.pages | sort: "order" %}
